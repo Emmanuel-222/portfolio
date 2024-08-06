@@ -19,7 +19,7 @@ const About = () => {
             </p>
           </div>
           <div>
-            <p>
+            <p className="font-montserrat text-[#8892b0]">
             I am passionate about building softwares that improve the life of people. I am specialise
               in creating softwares for client ranging from individuals, small-businesses and large coporate
               enterprises. What would you do if you had a software expert at your fingertips?

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../assets/logo.png";
+import { IoLogoReact } from "react-icons/io5";
 import { FaBars, FaTimes, FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -10,9 +10,9 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-10">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-10 font-montserrat">
       <div>
-        <img src={Logo} alt="myLogo" style={{ width: "100px" }} />
+        <IoLogoReact className="text-[3.5em]"/>
       </div>
       {/* menu */}
       <ul className="hidden md:flex">
@@ -90,7 +90,8 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              href="https://www.linkedin.com/In/emmagodei"
+              target="_blank" rel="noreferrer"
             >
               Linkedin <FaLinkedin size={30} />
             </a>
@@ -98,7 +99,8 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-black">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              href="https://www.github.com/Emmanuel-222"
+              target="_blank" rel="noreferrer"
             >
               Github <FaGithub size={30} />
             </a>
@@ -107,6 +109,7 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full text-gray-300"
               href="/"
+              target="_blank" rel="noreferrer"
             >
               Email <HiOutlineMail size={30} />
             </a>
@@ -115,6 +118,7 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full text-gray-300"
               href="/"
+              target="_blank" rel="noreferrer"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>

@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion';
+
+
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -7,14 +10,16 @@ import Contact from "./components/Contact";
 function App() {
 
   return (
-    <div>
+    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+    >
       <Navbar />
       <Home />
       <About />
       <Skills />
       <Work />
       <Contact />
-    </div>
+    </motion.div>
   )
 }
 

@@ -1,4 +1,9 @@
-import workImg from "../assets/bg-img.png"
+import workImg from "../assets/movieLandbg.png";
+import bgImg from "../assets/bg-img.png";
+import sidehustleImg from "../assets/sidehustle.png";
+import youtubeClone from "../assets/Youtubeclone.png";
+import Project from "./Project";
+import { MovielandUrl, MovieLandCode, SidehustleCode, SidehustleUrl } from "../utils/Constant";
 
 const Work = () => {
   return (
@@ -8,118 +13,17 @@ const Work = () => {
           <p className="text-bold text-4xl border-b-4 border-pink-600 inline">
             Work
           </p>
-          <p className="py-4">// Check out some of my projects</p>
+          <p className="py-4 text-[#8892b0] font-montserrat">// Check out some of my projects</p>
         </div>
-{/* Container */}
+        {/* Container */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {/* Grid Item */}
-          <div style={{backgroundImage: `url(${workImg})`}} 
-          className="shadow-lg shadow-[#040c16] flex flex-col justify-center items-center group container rounded-sm mx-auto content-div">
-            {/* Hover Effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="tracking-wider text-2xl text-center">
-                React Application
-              </span>
-              <div className="pt-8 text-center">
-                <a href="/">
-                  <button className="text-center p-3 rounded-lg m-2 bg-white text-gray-700 text-lg font-bold pt-3">Demo</button>
-                </a>
-                <a href="/">
-                  <button className="rounded-lg text-center p-3 m-2 bg-white text-gray-700 text-lg font-bold pt-3">Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div style={{backgroundImage: `url(${workImg})`}} 
-          className="shadow-lg shadow-[#040c16] flex flex-col justify-center items-center group container rounded-sm mx-auto content-div">
-            {/* Hover Effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="tracking-wider text-2xl text-center">
-                React Application
-              </span>
-              <div className="pt-8 text-center">
-                <a href="/">
-                  <button className="text-center p-3 rounded-lg m-2 bg-white text-gray-700 text-lg font-bold pt-3">Demo</button>
-                </a>
-                <a href="/">
-                  <button className="rounded-lg text-center p-3 m-2 bg-white text-gray-700 text-lg font-bold pt-3">Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div style={{backgroundImage: `url(${workImg})`}} 
-          className="shadow-lg shadow-[#040c16] flex flex-col justify-center items-center group container rounded-sm mx-auto content-div">
-            {/* Hover Effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="tracking-wider text-2xl text-center">
-                React Application
-              </span>
-              <div className="pt-8 text-center">
-                <a href="/">
-                  <button className="text-center p-3 rounded-lg m-2 bg-white text-gray-700 text-lg font-bold pt-3">Demo</button>
-                </a>
-                <a href="/">
-                  <button className="rounded-lg text-center p-3 m-2 bg-white text-gray-700 text-lg font-bold pt-3">Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div style={{backgroundImage: `url(${workImg})`}} 
-          className="shadow-lg shadow-[#040c16] flex flex-col justify-center items-center group container rounded-sm mx-auto content-div">
-            {/* Hover Effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="tracking-wider text-2xl text-center">
-                React Application
-              </span>
-              <div className="pt-8 text-center">
-                <a href="/">
-                  <button className="text-center p-3 rounded-lg m-2 bg-white text-gray-700 text-lg font-bold pt-3">Demo</button>
-                </a>
-                <a href="/">
-                  <button className="rounded-lg text-center p-3 m-2 bg-white text-gray-700 text-lg font-bold pt-3">Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div style={{backgroundImage: `url(${workImg})`}} 
-          className="shadow-lg shadow-[#040c16] flex flex-col justify-center items-center group container rounded-sm mx-auto content-div">
-            {/* Hover Effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="tracking-wider text-2xl text-center">
-                React Application
-              </span>
-              <div className="pt-8 text-center">
-                <a href="/">
-                  <button className="text-center p-3 rounded-lg m-2 bg-white text-gray-700 text-lg font-bold pt-3">Demo</button>
-                </a>
-                <a href="/">
-                  <button className="rounded-lg text-center p-3 m-2 bg-white text-gray-700 text-lg font-bold pt-3">Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div style={{backgroundImage: `url(${workImg})`}} 
-          className="shadow-lg shadow-[#040c16] flex flex-col justify-center items-center group container rounded-sm mx-auto content-div">
-            {/* Hover Effects */}
-            <div className="opacity-0 group-hover:opacity-100">
-              <span className="tracking-wider text-2xl text-center">
-                React Application
-              </span>
-              <div className="pt-8 text-center">
-                <a href="/">
-                  <button className="text-center p-3 rounded-lg m-2 bg-white text-gray-700 text-lg font-bold pt-3">Demo</button>
-                </a>
-                <a href="/">
-                  <button className="rounded-lg text-center p-3 m-2 bg-white text-gray-700 text-lg font-bold pt-3">Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
+          <Project projectName="MovieLand" image={workImg} demo={MovielandUrl} code={MovieLandCode}/>
+          <Project projectName="Sidehustle" image={sidehustleImg} demo={SidehustleUrl} code={SidehustleCode} />
+          <Project projectName="Sidehustle" image={youtubeClone} />
+          <Project projectName="Sidehustle" image={bgImg} />
+          <Project projectName="Sidehustle" image={bgImg} />
+          <Project projectName="Sidehustle" image={bgImg} />
         </div>
       </div>
     </div>

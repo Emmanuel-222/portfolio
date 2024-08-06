@@ -1,61 +1,43 @@
-import Html from '../assets/html.jpg';
-import Javascript from '../assets/js.jpg';
-import Php from '../assets/php.jpg';
-import React from '../assets/reacjs.jpg';
-import Github from '../assets/github.jpeg';
-import Aws from '../assets/aws.png';
-import Mongodb from '../assets/mongodb.jpeg';
-import Css from '../assets/css.png'
+import { motion } from "framer-motion";
+
+import Card from "./Card/Card";
+import { IoLogoJavascript, IoLogoGithub } from "react-icons/io";
+import { IoLogoReact } from "react-icons/io5";
+import { SiTailwindcss } from "react-icons/si";
 
 const Skills = () => {
   return (
-    <div name='skill' className="w-full h-full bg-[#0a192f] text-gray-300">
-        <div className='max-w-[1000px] mx-auto flex flex-col justify-center w-full h-full px-4'>
-            <div>
-             <p className='text-4xl inline font-bold border-pink-600 border-b-4 my-4'>Experience</p>
-             <p className='py-4'>// These are the technologies I've worked with</p>
-            </div>
-
-            <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-4'>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={Html} alt="html-icon" />
-                    <p className='my-4'>HTML</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={Javascript} alt="html-icon" />
-                    <p className='my-4'>Javascript</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={Php} alt="html-icon" />
-                    <p className='my-4'>Php</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={React} alt="html-icon" />
-                    <p className='my-4'>React</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={Github} alt="html-icon" />
-                    <p className='my-4'>Github</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={Aws} alt="html-icon" />
-                    <p className='my-4'>Aws</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={Css} alt="html-icon" />
-                    <p className='my-4'>Css</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={Mongodb} alt="html-icon" />
-                    <p className='my-4'>Mongodb</p>
-                </div>
-            </div>
-            
+    <div name="skill" className="w-full h-full bg-[#0a192f] text-gray-300">
+      <div className="max-w-[1000px] mx-auto flex flex-col justify-center w-full h-full px-4">
+        <div>
+          <p className="text-4xl inline font-bold border-pink-600 border-b-4 my-4">
+            Experience
+          </p>
+          <p className="py-4 font-montserrat text-[#8892b0]">// These are the technologies I've worked with</p>
         </div>
-    </div>  
-        
-      
-  )
-}
 
-export default Skills
+        <div className="w-full grid grid-cols-1 gap-8 sm:grid-cols-4 sm:gap-4 md:gap-0 text-center py-4 cursor-pointer">
+          {/* skills section */}
+          <Card
+            icon={<IoLogoJavascript className="text-[3.5em]" />}
+            name={"JavaScript"}
+          />
+          <Card
+            icon={<IoLogoGithub className="text-[3.5em]" />}
+            name={"GitHub"}
+          />
+          <Card
+            icon={<IoLogoReact className="text-[3.5em]" />}
+            name={"React"}
+          />
+          <Card
+            icon={<SiTailwindcss className="text-[3.5em]" />}
+            name={"TailwindCss"}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Skills;
